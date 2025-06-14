@@ -1,0 +1,589 @@
+/* Estilos para Gestión de Habitaciones */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0e0e1a;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.header h1 {
+    color: #00ffe5;
+    margin: 0;
+    font-size: 28px;
+}
+
+.btn-nuevo {
+    background: linear-gradient(135deg, #00adb5 0%, #00ffe5 100%);
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-nuevo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 229, 0.4);
+}
+
+.tabla-habitaciones {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a2e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+.tabla-habitaciones th {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: #00ffe5;
+    padding: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tabla-habitaciones td {
+    padding: 20px;
+    border-bottom: 1px solid #2f2f4f;
+    vertical-align: top;
+}
+
+.tabla-habitaciones tr:hover {
+    background-color: #242442;
+}
+
+.col-imagen {
+    width: 200px;
+}
+
+.imagen-habitacion {
+    width: 160px;
+    height: 120px;
+    background: linear-gradient(135deg, #2f2f4f 0%, #404060 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+    position: relative;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.imagen-habitacion:hover {
+    transform: scale(1.05);
+    border-color: #00ffe5;
+    box-shadow: 0 8px 25px rgba(0, 255, 229, 0.3);
+}
+
+.numero-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #00ffe5;
+    color: #000;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.estado-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.estado-disponible { background-color: #4caf50; color: white; }
+.estado-ocupada { background-color: #f44336; color: white; }
+.estado-mantenimiento { background-color: #ff9800; color: white; }
+
+.info-habitacion h3 {
+    color: #00ffe5;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tipo-habitacion {
+    background: linear-gradient(135deg, #0f3460 0%, #00adb5 100%);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 173, 181, 0.3);
+}
+
+.detalles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detalle-item {
+    background: linear-gradient(135deg, #2a2a4a 0%, #323252 100%);
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #404060;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.detalle-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, #00adb5 0%, #00ffe5 100%);
+}
+
+.detalle-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 173, 181, 0.15);
+    border-color: #00adb5;
+}
+
+.detalle-label {
+    color: #888;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.detalle-valor {
+    color: #e0e0e0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.precio-valor {
+    color: #4caf50 !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+}
+
+.descripcion {
+    background: linear-gradient(135deg, #1e1e3a 0%, #252545 100%);
+    padding: 16px;
+    border-radius: 10px;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    border-left: 4px solid #00ffe5;
+    font-style: italic;
+    position: relative;
+}
+
+.descripcion::before {
+    content: '"';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 24px;
+    color: #00ffe5;
+    font-family: serif;
+}
+
+.col-acciones {
+    width: 140px;
+}
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-editar, .btn-eliminar {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-editar {
+    background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+}
+
+.btn-eliminar {
+    background: linear-gradient(135deg, #e53935 0%, #ef5350 100%);
+}
+
+.btn-editar:hover, .btn-eliminar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1a1a2e;
+    margin: 2% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    color: #e0e0e0;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-header h3 {
+    color: #00ffe5;
+    margin: 0;
+}
+
+.close {
+    color: #888;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #00ffe5;
+}
+
+.modal-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #2f2f4f;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    color: #00ffe5;
+    border-bottom-color: #00ffe5;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #00ffe5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    padding: 12px;
+    background-color: #2f2f4f;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #00ffe5;
+    box-shadow: 0 0 0 2px rgba(0, 255, 229, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-guardar {
+    background: linear-gradient(135deg, #00adb5 0%, #00ffe5 100%);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cancelar {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Gestión de imágenes - 4 imágenes fijas */
+.imagenes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.imagen-slot {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imagen-slot label {
+    color: #00ffe5;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+.imagen-upload {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #555;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: #2a2a4a;
+}
+
+.imagen-upload:hover {
+    border-color: #00ffe5;
+    background-color: rgba(0, 255, 229, 0.1);
+}
+
+.imagen-upload.has-image {
+    border-style: solid;
+    border-color: #00adb5;
+}
+
+.imagen-upload img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.imagen-upload .upload-text {
+    color: #888;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+}
+
+.imagen-upload .change-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: #00adb5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 11px;
+    display: none;
+}
+
+.imagen-upload.has-image .change-btn {
+    display: block;
+}
+
+.imagen-upload.has-image .upload-text {
+    display: none;
+}
+
+.imagen-upload input[type="file"] {
+    display: none;
+}
+
+/* Carrusel simplificado - 4 imágenes fijas */
+.carrusel-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    backdrop-filter: blur(10px);
+}
+
+.carrusel-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 5% auto;
+    background-color: #1a1a2e;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.carrusel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.carrusel-header h3 {
+    color: #00ffe5;
+    margin: 0;
+}
+
+.carrusel-imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.carrusel-imagen {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #555;
+    transition: all 0.3s ease;
+    background-color: #2a2a4a;
+}
+
+.carrusel-imagen:hover {
+    border-color: #00ffe5;
+    transform: scale(1.02);
+}
+
+.carrusel-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel-imagen .imagen-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 20px 15px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.carrusel-imagen .no-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #888;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mensaje {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.mensaje.exito {
+    background-color: #4caf50;
+    color: white;
+}
+
+.mensaje.error {
+    background-color: #f44336;
+    color: white;
+}

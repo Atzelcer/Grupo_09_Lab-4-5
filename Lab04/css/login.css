@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(to bottom right, #0d1f5d 0%, #0d1f5d 40%, #b71c1c 60%, #b71c1c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.logo-izq,
+.logo-der {
+  position: absolute;
+  top: 30px;
+}
+
+.logo-izq {
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-der {
+  right: 30px;
+}
+
+.logo-izq img,
+.logo-der img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.etiqueta-lab {
+  color: rgb(251, 251, 251);
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: monospace;
+}
+
+.titulo-sistema {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.titulo-sistema h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.titulo-sistema h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin: 5px 0 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  border: 2px solid rgba(44, 62, 80, 0.1);
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.login-container h2 {
+  color: #1c2e4a;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e53935;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+form#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  max-width: 280px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #032254;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: block;
+}
+
+button {
+  width: 80%;
+  padding: 12px;
+  font-size: 0.95rem;
+  background-color: #c34f4d;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 6px;
+}
+
+button:hover {
+  background-color: #4a3333;
+}
+
+.mensaje-error {
+  margin-top: 15px;
+  color: #0e2981;
+  font-size: 0.85rem;
+}

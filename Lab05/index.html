@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel KUCHIUYAS - Bienvenido</title>
+    <link rel="stylesheet" href="css/style.css?v=8.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2>KUCHIUYAS</h2>
+          <span>Hotel & Resort</span>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn-login" onclick="javascript:abrirModal()">
+            <i class="fas fa-user"></i> Acceder
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Bienvenido a <span class="hotel-name">KUCHIUYAS</span>
+        </h1>
+        <p class="hero-subtitle">
+          Una experiencia única en hospitalidad y confort
+        </p>
+        <p class="hero-description">
+          Descubre el lujo y la elegancia en cada rincón de nuestro exclusivo
+          hotel. Tu escapada perfecta te espera.
+        </p>
+        <div class="hero-buttons">
+          <button
+            class="btn-primary"
+            onclick="javascript:abrirModal(); showRegister();"
+          >
+            <i class="fas fa-user-plus"></i> Registrarse
+          </button>
+          <button class="btn-secondary" onclick="javascript:scrollToFeatures()">
+            <i class="fas fa-info-circle"></i> Conocer Más
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="img/ENTRADA HOTEL/NDMHotel.jpg" alt="Hotel KUCHIUYAS" />
+      </div>
+    </section>
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2>¿Por qué elegir KUCHIUYAS?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-bed"></i>
+            <h3>Habitaciones de Lujo</h3>
+            <p>
+              Espacios cómodos y elegantes diseñados para tu máximo descanso
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-concierge-bell"></i>
+            <h3>Servicio 24/7</h3>
+            <p>
+              Atención personalizada las 24 horas del día para hacer tu estadía
+              perfecta
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-spa"></i>
+            <h3>Spa & Wellness</h3>
+            <p>Relájate en nuestras instalaciones de spa y bienestar</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Gastronomía Exclusiva</h3>
+            <p>Deléitate con nuestra cocina gourmet y platos únicos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <div class="container">
+        <h2>Nuestras Instalaciones</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="img/HABITACION1/habitacion1.jpg"
+              alt="Habitación Deluxe"
+            />
+            <div class="gallery-overlay">
+              <h3>Habitación Deluxe</h3>
+              <p>Confort y elegancia</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/HABITACION2/habitacion2.jpg" alt="Suite Premium" />
+            <div class="gallery-overlay">
+              <h3>Suite Premium</h3>
+              <p>Lujo incomparable</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="img/HABITACION3/habitacion3.jpg"
+              alt="Habitación Familiar"
+            />
+            <div class="gallery-overlay">
+              <h3>Habitación Familiar</h3>
+              <p>Perfecta para familias</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>¿Listo para vivir la experiencia KUCHIUYAS?</h2>
+          <p>Reserva ahora y disfruta de nuestros servicios exclusivos</p>
+          <button class="btn-cta" onclick="javascript:abrirModal()">
+            <i class="fas fa-calendar-check"></i> Reservar Ahora
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div id="modalLogin" class="modal">
+      <div class="modal-content">
+        <span class="cerrar" onclick="javascript:cerrarModal()">&times;</span>
+        <div class="modal-header">
+          <h2>Iniciar Sesión</h2>
+          <p>Accede a tu cuenta o regístrate si es tu primera vez</p>
+        </div>
+        <div class="modal-tabs">
+          <button class="tab-btn active" onclick="javascript:showLogin()">
+            Iniciar Sesión
+          </button>
+          <button class="tab-btn" onclick="javascript:showRegister()">
+            Registrarse
+          </button>
+        </div>
+        <!-- Login Form -->
+        <form
+          id="loginForm"
+          onsubmit="handleLogin(event)"
+          class="modal-form active"
+        >
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="clave" required />
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-sign-in-alt"></i> Entrar
+          </button>
+        </form>
+        <!-- Register Form -->
+        <form
+          id="registerForm"
+          onsubmit="javascript:handleRegister(event)"
+          class="modal-form"
+        >
+          <label for="reg_nombre">Nombre completo</label>
+          <input type="text" id="reg_nombre" name="nombre" required />
+
+          <label for="reg_correo">Correo electrónico</label>
+          <input type="email" id="reg_correo" name="correo" required />
+
+          <label for="reg_password">Contraseña</label>
+          <input
+            type="password"
+            id="reg_password"
+            name="clave"
+            minlength="6"
+            required
+          />
+
+          <label for="reg_confirm">Confirmar contraseña</label>
+          <input
+            type="password"
+            id="reg_confirm"
+            name="confirmar_clave"
+            minlength="6"
+            required
+          />
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-user-plus"></i> Crear Cuenta
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>KUCHIUYAS Hotel & Resort</h3>
+            <p>Tu destino de lujo y confort</p>
+          </div>
+          <div class="footer-section">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-phone"></i> +51 999 888 777</p>
+            <p><i class="fas fa-envelope"></i> info@kuchiuyas.com</p>
+          </div>
+          <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Hotel KUCHIUYAS. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

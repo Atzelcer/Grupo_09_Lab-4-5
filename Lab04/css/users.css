@@ -1,0 +1,170 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+button, th, td {
+  font-family: 'Inter', sans-serif;
+}
+
+.header-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #fff;
+}
+
+.titulo-header {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+.usuario-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.usuario-header span {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.usuario-header button {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: 2px solid #dc3545;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.usuario-header button:hover {
+  background-color: white;
+  color: #dc3545;
+}
+
+.barra-separadora {
+  height: 6px;
+  background: linear-gradient(to right, rgb(189, 72, 72), rgb(0, 157, 255));
+  margin-bottom: 15px;
+}
+
+.contenedor-main {
+  display: flex;
+}
+
+.menu-lateral {
+  width: 220px;
+  padding: 20px 10px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+}
+
+.menu-lateral button {
+  display: block;
+  width: 180px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #204a79;
+  color: white;
+  border: 2px solid #3c86b7;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.menu-lateral button:hover {
+  background-color: white;
+  color: #007BFF;
+}
+
+.tabla-container {
+  flex: 1;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+td button {
+  background-color: white;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  padding: 5px 12px;
+  margin: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+td button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.correo-leido {
+  background-color: #e5e5e5;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn-operacion {
+  background-color: white;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  padding: 5px 10px;
+  margin: 4px 6px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}

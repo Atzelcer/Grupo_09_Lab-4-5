@@ -1,0 +1,289 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0e0e1a;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.header h1 {
+    color: #00ffe5;
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Botones */
+.btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-nuevo {
+    background: linear-gradient(135deg, #00adb5 0%, #00ffe5 100%);
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-nuevo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 229, 0.4);
+}
+
+.btn-editar {
+    background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+    color: white;
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.btn-eliminar {
+    background: linear-gradient(135deg, #e53935 0%, #ef5350 100%);
+    color: white;
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.btn-guardar {
+    background: linear-gradient(135deg, #00adb5 0%, #00ffe5 100%);
+    color: #000;
+}
+
+.btn-cancelar {
+    background-color: #666;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tabla */
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a2e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+.tabla-reservas th {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: #00ffe5;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tabla-reservas td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #2f2f4f;
+    vertical-align: middle;
+}
+
+.tabla-reservas tr:hover {
+    background-color: #242442;
+}
+
+/* Badges para estados */
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.badge-pendiente {
+    background-color: #ff9800;
+    color: white;
+}
+
+.badge-confirmada {
+    background-color: #4caf50;
+    color: white;
+}
+
+.badge-cancelada {
+    background-color: #f44336;
+    color: white;
+}
+
+.badge-completada {
+    background-color: #9c27b0;
+    color: white;
+}
+
+/* Acciones */
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1a1a2e;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    color: #e0e0e0;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-header h3 {
+    color: #00ffe5;
+    margin: 0;
+}
+
+.close {
+    color: #888;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #00ffe5;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #00ffe5;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #2f2f4f;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #00ffe5;
+    box-shadow: 0 0 0 2px rgba(0, 255, 229, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Mensajes */
+.mensaje {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.mensaje.exito {
+    background-color: #4caf50;
+    color: white;
+}
+
+.mensaje.error {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Información adicional */
+.info-usuario,
+.info-habitacion {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .tabla-reservas {
+        font-size: 12px;
+    }
+    
+    .tabla-reservas th,
+    .tabla-reservas td {
+        padding: 8px;
+    }
+    
+    .acciones {
+        flex-direction: column;
+    }
+    
+    .modal-content {
+        margin: 2% auto;
+        width: 95%;
+    }
+}

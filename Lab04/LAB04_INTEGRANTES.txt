@@ -1,0 +1,21 @@
+Lab 04
+
+Fecha de presentación: 24 / 05 / 2025
+
+Integrantes :
+
+* Cervantes Torres Atzel Alan - CICO
+* Mallku Choque Juan Daniel - SIS
+* Vela Gutierrez Elmer Kevin - CICO
+* Quispe López Carla Andrea - CICO
+
+Enlace de GitHub : 
+https://github.com/Atzelcer/DesarrolloWebAACT/tree/main/Laboratorios/Lab04
+
+
+Iniciar Sesión:
+-----------------
+Administrator:   admin@company.com
+Cliente:   usuario1@company.com
+
+Contraseña para ambos:        password

@@ -1,0 +1,339 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+button, th, td {
+  font-family: 'Inter', sans-serif;
+}
+
+.header-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #fff;
+}
+
+.titulo-header {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+.usuario-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.usuario-header span {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.usuario-header button {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: 2px solid #dc3545;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.usuario-header button:hover {
+  background-color: white;
+  color: #dc3545;
+}
+
+.barra-separadora {
+  height: 6px;
+  background: linear-gradient(to right, rgb(189, 72, 72), rgb(0, 157, 255));
+  margin-bottom: 15px;
+}
+
+.contenedor-main {
+  display: flex;
+}
+
+.menu-lateral {
+  width: 220px;
+  padding: 20px 10px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+}
+
+.menu-lateral button {
+  display: block;
+  width: 180px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #204a79;
+  color: white;
+  border: 2px solid #3c86b7;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.menu-lateral button:hover {
+  background-color: white;
+  color: #007BFF;
+}
+
+.contenido-principal {
+  flex: 1;
+  padding: 20px;
+}
+
+.seccion {
+  display: none;
+}
+
+.seccion:not(.oculto) {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+td button {
+  background-color: white;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 2px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+td button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+td button.btn-suspender {
+  color: #ff9800;
+  border-color: #ff9800;
+}
+
+td button.btn-suspender:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+td button.btn-activar {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+td button.btn-activar:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+td button.btn-eliminar {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+td button.btn-eliminar:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-agregar {
+  background-color: white;
+  color: #28a745;
+  border: 2px solid #28a745;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#formUsuario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.botones-modal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.botones-modal button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  color: #082544;
+  border: 2px solid #162331;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+  background-color: #ffffff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.botones-modal button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.botones-modal button[type="submit"] {
+  color: green;
+  border: 2px solid green;
+}
+
+.botones-modal button[type="submit"]:hover {
+  background-color: green;
+  color: white;
+}
+
+.form-aviso {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.btn-enviar {
+  background-color: #ffffff;
+  color: green;
+  border: 2px solid green;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: green;
+  color: white;
+}
+
+.filtros {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.filtros select,
+.filtros button {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filtros button {
+  background-color: #ffffff;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtros button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+#passwordHelp {
+  color: #9c099c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.estado-activo {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.estado-suspendido {
+  color: #dc3545;
+  font-weight: bold;
+}
